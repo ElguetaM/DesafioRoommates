@@ -1,0 +1,32 @@
+{
+  "roommates": [
+    {
+      "id": "3095",
+      "nombre": "Radmila Tomović",
+      "debe": 0,
+      "recibe": 0,
+      "email": "radmila.tomovic@example.com"
+    },
+    {
+      "id": "c4a5",
+      "nombre": "Claude Hicks",
+      "debe": 0,
+      "recibe": 0,
+      "email": "claude.hicks@example.com"
+    },
+    {
+      "id": "6703",
+      "nombre": "Sai Jain",
+      "debe": 0,
+      "recibe": 0,
+      "email": "sai.jain@example.com"
+    },
+    {
+      "id": "1385",
+      "nombre": "Halil Francois",
+      "debe": 0,
+      "recibe": 0,
+      "email": "halil.francois@example.com"
+    }
+  ]
+}

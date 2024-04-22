@@ -1,0 +1,28 @@
+{
+  "gastos": [
+    {
+      "roommate": "Radmila Tomović",
+      "descripcion": "Comida",
+      "monto": 20000,
+      "id": "1d56"
+    },
+    {
+      "roommate": "Claude Hicks",
+      "descripcion": "Compras de supermercado",
+      "monto": 40000,
+      "id": "a6b7"
+    },
+    {
+      "roommate": "Claude Hicks",
+      "descripcion": "Compras de supermercado",
+      "monto": 40000,
+      "id": "a6f7"
+    },
+    {
+      "roommate": "Sai Jain",
+      "descripcion": "Asado",
+      "monto": 15000,
+      "id": "89da"
+    }
+  ]
+}
