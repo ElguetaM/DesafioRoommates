@@ -66,31 +66,6 @@ const postGastosQ = async (gasto) => {
 };
 
 const putGastosQ = async (gasto, id) => {
-  try {
-    //
-    // const gastosJSON = await JSON.parse(fs.readFileSync(gastosPath, "utf-8"));
-    // const gastos = gastosJSON.gastos;
-    // gastosJSON.gastos = gastos.map((de) => (de.id === id ? gasto : de));
-    // fs.writeFileSync(gastosPath, JSON.stringify(gastosJSON));
-    //
-    //
-    let { gastos } = await JSON.parse(fs.readFileSync(gastosPath, "utf-8"));
-    gastos = gastos.map((de) => {
-      if (de.id === id) {
-        return {
-          roommate: roommate,
-          descripcion: descripcion,
-          monto: monto,
-        };
-      }
-      return de;
-    });
-    fs.writeFileSync(gastosPath, JSON.stringify({ gastos }));
-    //
-    //console.log(gasto);
-  } catch (error) {
-    console.log(error.message);
-  }
 };
 
 const delGastosQ = async (id) => {
@@ -102,8 +77,6 @@ const delGastosQ = async (id) => {
     console.log(error.message);
   }
 };
-
-//const deudor = () => {};
 
 export {
   getRoommatesQ,

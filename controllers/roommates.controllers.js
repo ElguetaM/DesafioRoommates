@@ -3,7 +3,7 @@ import {
   postRoommateQ,
   getGastosQ,
   postGastosQ,
-  putGastosQ,
+  //putGastosQ,
   delGastosQ,
 } from "../query/roommates.query.js";
 import path from "path";
@@ -60,11 +60,18 @@ const postGastosC = async (req, res) => {
 //Put gastos//
 const putGastosC = async (req, res) => {
   try {
-    const { id } = req.query;
+    let { id } = req.query;
     const { roommate, descripcion, monto } = req.body;
     const newGasto = [roommate, descripcion, monto, id];
-    const newDatos = await putGastosQ(newGasto);
-    res.status(200).send(newDatos);
+    let { gastos } = JSON.parse(fs.readFileSync(gastosPath));
+    gastos = gastos.map((de) => {
+      if (de.roommate === roommate) {
+        return { ...de, monto: monto };
+      }
+      return de;
+    });
+    fs.writeFileSync(gastosPath, JSON.stringify({ gastos }));
+    res.send(newGasto);
   } catch (error) {
     res.status(500).send(error.message);
   }
